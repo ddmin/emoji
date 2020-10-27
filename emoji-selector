@@ -9,8 +9,6 @@ line=`cat $EMOJIS_PATH | rofi -dmenu -markup-rows -p "" -columns 6`
 [[ -z $line ]] && exit
 a="${line#*>}"
 b="${a%:*}"
-echo $a
-echo $b
 echo -n $b | xsel -ipb
 
 notify-send -t 500 --urgency=low "Copied $b to clipboard."
