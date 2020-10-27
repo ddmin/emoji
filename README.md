@@ -2,11 +2,12 @@
 ## using rofi
 
 Mapped to mod+E on my keyboard.
+
 `bash -e /home/ddmin/Code/Bash/emoji-selector`
 
 ## Files
 * emoji-list goes in ~/.config/rofi/emoji-list
-*
+* emoji-selector just needs to be on $PATH
 
 ## Original Script
 99% copied from this [script](https://gist.github.com/imAliAzhar/f3b16622cd279fb0b019f237a8a12510).
