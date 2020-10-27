@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Original Source:
+# https://gist.github.com/imAliAzhar/f3b16622cd279fb0b019f237a8a12510
+
+EMOJIS_PATH="$HOME/.config/rofi/emoji-list"
+
+line=`cat $EMOJIS_PATH | rofi -dmenu -markup-rows -p "" -columns 6`
+[[ -z $line ]] && exit
+a="${line#*>}"
+b="${a%:*}"
+echo $a
+echo $b
+echo -n $b | xsel -ipb
+
+notify-send -t 500 --urgency=low "Copied $b to clipboard."
