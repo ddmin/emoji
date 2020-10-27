@@ -1,6 +1,6 @@
 # Em🙃ji
 
-[img](./emoji.png)
+![img](./emoji.png)
 
 Displays a `rofi` menu with emojis and loads the emoji into clipboard.
 
