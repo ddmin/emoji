@@ -11,4 +11,4 @@ a="${line#*>}"
 b="${a%:*}"
 echo -n $b | xsel -ipb
 
-notify-send -t 500 --urgency=normal "Copied $b to clipboard."
+xdotool key ctrl+shift+v
