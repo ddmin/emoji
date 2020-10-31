@@ -3,6 +3,7 @@
 ![img](./emoji.png)
 
 Displays a `rofi` menu with emojis and loads the emoji into clipboard.
+*Update*: now it automatically pastes the emoji
 
 Mapped to mod+E on my keyboard.
 
