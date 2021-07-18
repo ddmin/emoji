@@ -36,7 +36,11 @@ for line in txt.split('# subgroup: '):
 
             # get emoji details
             emoji_info = s[1].split('# ')[1].split()
-            emoji_name = " ".join(emoji_info[2:]).replace(':', '')
+
+            emoji_name = " ".join(emoji_info[2:]) \
+                    .replace(':', '') \
+                    .replace('&', 'and')
+
             emoji_symbol = emoji_info[0]
 
             formatted = f'<span lang="{emoji_name.lower()}-{sanitize(emoji_category.lower())}"> {emoji_symbol} :{emoji_name}</span>'
