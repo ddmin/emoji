@@ -1,0 +1,11 @@
+#!/bin/bash
+
+UNICODE_PATH="$HOME/.config/rofi/unicode-list"
+
+line=`cat $UNICODE_PATH | rofi -dmenu -markup-rows -p "unicode"`
+[[ -z $line ]] && exit
+a="${line#*>}"
+b="${a%:*}"
+echo -n $b | xsel -ipb
+
+xdotool key ctrl+shift+v

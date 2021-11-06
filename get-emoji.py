@@ -1,7 +1,6 @@
 # Create emoji list by scraping unicode website
 
 import requests
-import time
 
 def sanitize(string):
     new_string = ''

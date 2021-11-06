@@ -1,4 +1,4 @@
-# Em🙃ji
+# Em🙃ji (and ⋃𝔑ⅈç◯ⅆε⁡)
 
 ![img](./emoji.png)
 
@@ -8,18 +8,19 @@ Displays a `rofi` menu with emojis and loads the emoji into clipboard.
 
 Mapped to mod+E on my keyboard.
 
+Unicode Selector is mapped to mod+W.
+
 `bash -e /home/ddmin/Code/Bash/emoji-selector`
+`bash -e /home/ddmin/Code/Bash/unicode-selector`
 
 ## Files
-* emoji-list goes in ~/.config/rofi/emoji-list
-* emoji-selector just needs to be on $PATH
+* emoji-list and unicode-list goes in ~/.config/rofi/emoji-list
+* emoji-selector and unicode-list just needs to be on $PATH
 
 ## Original Script
 The rofi script was 99% copied from this [script](https://gist.github.com/imAliAzhar/f3b16622cd279fb0b019f237a8a12510).
 
-The script to get emojis was written by me.
+The script to get emojis and unicode was written by me.
 
 ## Changes
-I removed the pasting function because it doesn't work, and I added a notify-send command instead.
-
-I also don't use the theme attached to this gist because [my theme](https://raw.githubusercontent.com/ddmin/dotfiles/master/dotfiles/.Xresources) will suffice.
+I don't use the theme attached to this gist because [my theme](https://raw.githubusercontent.com/ddmin/dotfiles/master/dotfiles/.Xresources) will suffice.
