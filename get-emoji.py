@@ -19,6 +19,8 @@ txt = requests.get(UNICODE_LIST).text
 with open(EMOJI_FILE, 'w') as f:
     f.write('')
 
+seen_emoji = []
+
 # getting the emojis
 for line in txt.split('# subgroup: '):
     l = line.split('\n')
@@ -40,7 +42,19 @@ for line in txt.split('# subgroup: '):
                     .replace(':', '') \
                     .replace('&', 'and')
 
+            # remove redundant tone emojis to improve search
+            if 'tone' in emoji_name:
+
+                # don't remove the actual skin tone modifiers
+                if not 'skin-tone' in emoji_category.lower():
+                    continue
+
             emoji_symbol = emoji_info[0]
+
+            if not emoji_name in seen_emoji:
+                seen_emoji.append(emoji_name)
+            else:
+                continue
 
             formatted = f'<span lang="{emoji_name.lower()}-{sanitize(emoji_category.lower())}"> {emoji_symbol} :{emoji_name}</span>'
             with open(EMOJI_FILE, 'a') as f:

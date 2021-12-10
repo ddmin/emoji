@@ -10,8 +10,8 @@ Mapped to mod+E on my keyboard.
 
 Unicode Selector is mapped to mod+W.
 
-`bash -e /home/ddmin/Code/Bash/emoji-selector`
-`bash -e /home/ddmin/Code/Bash/unicode-selector`
+`bash -e $HOME/Code/Bash/emoji-selector`
+`bash -e $HOME/Code/Bash/unicode-selector`
 
 ## Files
 * emoji-list and unicode-list goes in ~/.config/rofi/emoji-list
